@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+
+message PasswordDetails {
+  string jwtToken = 1;
+  bool auth = 2;
+//  string hashValue = 3;
+//  string saltValue = 4;
+}
+service PasswordService {
+  rpc RetrieveJWT (Empty) returns (PasswordDetails) {}
+//  rpc AddNewDetails (PasswordDetails) returns (PasswordDetails) {}
+//  rpc UpdatePasswordDetails (PasswordDetails) returns (PasswordDetails) {}
+}
+message Empty {}
